@@ -7,7 +7,7 @@
     <title>To Do List</title>
 </head>
 <body>
-    <div class="container bg-gray-100 mx-24 px-20">
+    <div class="container bg-gray-100 mx-24 px-20 pb-20">
     <div class="flex">
 
     <?php

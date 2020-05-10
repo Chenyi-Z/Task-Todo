@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="output.css" />
 <?php
 
 echo "<a href='index.php'>";
-echo "<button class='taskComplete'>Home</button></a>";
+echo "<button class='block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-4 rounded'>Home</button></a>";
 
 require_once 'db_connect.php';
 
@@ -47,10 +48,10 @@ while($row = mysqli_fetch_array($result)){
     } else{
         $cat = "Other";
     }
-    echo "<div class='task'>";
+    echo "<div class='bg-indigo-200 rounded m-4 p-5'>";
     echo "<h5>" .$row["priority"]. "</h5>";
-    echo "<strong>" .$cat ,"</strong><h5>" . $row['task'] ."</h5> <p>" .$row['details'] ."</p>";
-    echo "<h6>" .$row['taskDate'] ."</h6>";
+    echo "<strong>" .$cat ,"</strong><h5 class='font-sans text-base'>" . $row['task'] ."</h5> <p class='font-sans text-sm'>" .$row['details'] ."</p>";
+    echo "<p class='font-sans text-sm'>" .$row['taskDate'] ."</p>";
     echo "</div>";
 }
 
